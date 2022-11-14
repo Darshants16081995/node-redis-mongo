@@ -3,7 +3,7 @@ pipeline{
 	agent any
 
 	environment {
-		DOCKERHUB_CREDENTIALS=credentials('dockerhub')
+		DOCKERHUB_CREDENTIALS=credentials('admin')
 	}
 
 	stages {
@@ -11,14 +11,14 @@ pipeline{
 	    stage('gitclone') {
 
 			steps {
-				git  'https://github.com/ahildarshan/node-redis-mongo.git'
+				git  'https://github.com/Darshants16081995/node-redis-mongo.git'
 			}
 		}
 
 		stage('Build') {
 
 			steps {
-				sh 'docker build -t ahildarshan/node:latest .'
+				sh 'docker build -t darshants/node:latest .'
 			}
 		}
 
@@ -32,7 +32,7 @@ pipeline{
 		stage('Push') {
 
 			steps {
-				sh 'docker push ahildarshan/node:latest'
+				sh 'docker push darshants/node:latest'
 			}
 		}
 	}

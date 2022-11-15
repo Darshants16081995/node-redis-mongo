@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({extended: true}))
 
 // MONGODB SETUP
 
-mongoose.connect('mongodb://43.204.217.165:27017/redisdemo',{
+mongoose.connect('mongodb://65.0.122.110:27017/redisdemo',{
     useCreateIndex: true,
     useNewUrlParser: true,
     useUnifiedTopology: true
